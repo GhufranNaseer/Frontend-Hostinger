@@ -10,6 +10,7 @@ const Login = lazy(() => import('../pages/auth/Login'));
 const AdminDashboard = lazy(() => import('../pages/admin/Dashboard'));
 const Events = lazy(() => import('../pages/admin/Events'));
 const EventDetails = lazy(() => import('../pages/admin/EventDetails'));
+const Departments = lazy(() => import('../pages/admin/Departments'));
 const MyTasks = lazy(() => import('../pages/user/MyTasks'));
 
 const LoadingFallback = () => (
@@ -38,6 +39,7 @@ const AppRoutes: React.FC = () => {
                             <Route path="/admin/dashboard" element={<AdminDashboard />} />
                             <Route path="/admin/events" element={<Events />} />
                             <Route path="/admin/events/:id" element={<EventDetails />} />
+                            <Route path="/admin/departments" element={<Departments />} />
                         </Route>
 
                         {/* User routes */}

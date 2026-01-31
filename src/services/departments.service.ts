@@ -12,8 +12,17 @@ export const departmentsService = {
         return data;
     },
 
-    create: async (name: string): Promise<Department> => {
-        const { data } = await api.post('/departments', { name });
+    create: async (payload: { name: string; roles?: string[] }): Promise<Department> => {
+        const { data } = await api.post('/departments', payload);
         return data;
+    },
+
+    update: async (id: string, payload: { name?: string; roles?: string[] }): Promise<Department> => {
+        const { data } = await api.patch(`/departments/${id}`, payload);
+        return data;
+    },
+
+    remove: async (id: string): Promise<void> => {
+        await api.delete(`/departments/${id}`);
     },
 };

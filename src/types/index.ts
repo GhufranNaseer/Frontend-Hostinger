@@ -9,6 +9,7 @@ export interface User {
 export interface Department {
     id: string;
     name: string;
+    roles?: string[];
 }
 
 export interface Event {

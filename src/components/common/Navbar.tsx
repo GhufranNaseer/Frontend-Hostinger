@@ -34,6 +34,12 @@ const Navbar: React.FC = () => {
                                 >
                                     Events
                                 </Link>
+                                <Link
+                                    to="/admin/departments"
+                                    className="px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-blue-600 hover:bg-gray-50 transition"
+                                >
+                                    Departments
+                                </Link>
                             </div>
                         )}
                     </div>
