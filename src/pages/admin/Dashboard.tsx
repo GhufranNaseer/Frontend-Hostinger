@@ -34,6 +34,28 @@ const AdminDashboard: React.FC = () => {
                         </div>
                     </Link>
 
+                    {/* Departments Card */}
+                    <Link
+                        to="/admin/departments"
+                        className="group bg-white p-6 rounded-2xl shadow-sm border hover:shadow-xl hover:border-blue-500 transition-all duration-300"
+                    >
+                        <div className="flex flex-col">
+                            <div className="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mt-4">Manage Departments</h3>
+                            <p className="text-gray-500 mt-2 text-sm leading-relaxed">Organize teams, assign department roles, and structure your workspace.</p>
+                            <div className="mt-4 flex items-center text-purple-600 font-bold text-sm">
+                                Go to Departments
+                                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </Link>
+
                     {/* Users Card (Coming Soon) */}
                     <div className="bg-white p-6 rounded-2xl shadow-sm border opacity-60 grayscale cursor-not-allowed">
                         <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-400">
