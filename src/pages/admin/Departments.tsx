@@ -27,11 +27,13 @@ const Departments: React.FC = () => {
         try {
             if (editingDepartment) {
                 const updated = await departmentsService.update(editingDepartment.id, { name, roles: selectedRoles });
-                setDepartments((departments: Department[] | null) => departments?.map((d: Department) => d.id === updated.id ? updated : d) || null);
+                const updatedList = departments?.map((d: Department) => d.id === updated.id ? updated : d) || [];
+                setDepartments(updatedList);
                 setEditingDepartment(null);
             } else {
                 const newDept = await departmentsService.create({ name, roles: selectedRoles });
-                if (departments) setDepartments((departments: Department[] | null) => departments ? [...departments, newDept] : [newDept]);
+                const newList = departments ? [...departments, newDept] : [newDept];
+                setDepartments(newList);
             }
             setName('');
             setSelectedRoles([]);
