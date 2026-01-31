@@ -21,7 +21,7 @@ const EventDetails: React.FC = () => {
       const [eventData, deptsData, usersData] = await Promise.all([
         eventsService.getOne(id),
         departmentsService.getAll(),
-        usersService.getUsers(),
+        usersService.getAll(),
       ]);
       setEvent(eventData);
       setDepartments(deptsData);

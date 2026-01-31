@@ -11,6 +11,7 @@ This is the frontend application for the BOQ Task Management System.
   - Enriched `departments.service.ts` with full CRUD operations.
   - Updated `AppRoutes.tsx` and `Navbar.tsx` for new navigation.
   - Updated `types` to support department roles.
+- **Hotfix:** Fixed crash in `EventDetails.tsx` by correcting `usersService.getUsers` to `usersService.getAll`.
 - **Infrastructure:** Added `.htaccess` to `public/` directory to fix SPA routing 404 errors on Hostinger.
 - **Bug Fix (v2):** Refactored `Departments.tsx` to handle state updates explicitly, removing dependency on `useFetch` functional updates to prevent `map` crashes due to caching or type issues.
 - **Bug Fix:** Fixed `TypeError: departments.map is not a function` by updating the `useFetch` hook to support functional state updates.
