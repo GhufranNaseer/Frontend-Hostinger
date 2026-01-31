@@ -4,6 +4,7 @@ export interface User {
     name: string;
     role: 'ADMIN' | 'DEPARTMENT_USER';
     department?: Department;
+    departmentId?: string; // Added for frontend form handling
 }
 
 export interface Department {

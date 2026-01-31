@@ -56,17 +56,27 @@ const AdminDashboard: React.FC = () => {
                         </div>
                     </Link>
 
-                    {/* Users Card (Coming Soon) */}
-                    <div className="bg-white p-6 rounded-2xl shadow-sm border opacity-60 grayscale cursor-not-allowed">
-                        <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center text-gray-400">
-                            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg>
+                    {/* Users Card */}
+                    <Link
+                        to="/admin/users"
+                        className="group bg-white p-6 rounded-2xl shadow-sm border hover:shadow-xl hover:border-orange-500 transition-all duration-300"
+                    >
+                        <div className="flex flex-col">
+                            <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 mt-4">Manage Users</h3>
+                            <p className="text-gray-500 mt-2 text-sm leading-relaxed">Invite team members, assign departments, and manage permissions.</p>
+                            <div className="mt-4 flex items-center text-orange-600 font-bold text-sm">
+                                Go to Users
+                                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
                         </div>
-                        <h3 className="text-xl font-bold text-gray-400 mt-4">Manage Users</h3>
-                        <p className="text-gray-400 mt-2 text-sm leading-relaxed">Invite team members, assign departments, and manage permissions.</p>
-                        <span className="mt-4 inline-block bg-gray-100 text-gray-500 text-[10px] font-bold px-2 py-1 rounded-full uppercase">Coming Soon</span>
-                    </div>
+                    </Link>
                 </div>
 
                 {/* Quick Stats Section */}

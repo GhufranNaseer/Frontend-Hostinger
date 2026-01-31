@@ -11,6 +11,7 @@ const AdminDashboard = lazy(() => import('../pages/admin/Dashboard'));
 const Events = lazy(() => import('../pages/admin/Events'));
 const EventDetails = lazy(() => import('../pages/admin/EventDetails'));
 const Departments = lazy(() => import('../pages/admin/Departments'));
+const Users = lazy(() => import('../pages/admin/Users'));
 const MyTasks = lazy(() => import('../pages/user/MyTasks'));
 
 const LoadingFallback = () => (
