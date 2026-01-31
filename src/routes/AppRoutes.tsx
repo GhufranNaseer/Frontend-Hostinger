@@ -41,6 +41,7 @@ const AppRoutes: React.FC = () => {
                             <Route path="/admin/events" element={<Events />} />
                             <Route path="/admin/events/:id" element={<EventDetails />} />
                             <Route path="/admin/departments" element={<Departments />} />
+                            <Route path="/admin/users" element={<Users />} />
                         </Route>
 
                         {/* User routes */}
