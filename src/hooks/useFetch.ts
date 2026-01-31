@@ -38,8 +38,11 @@ export function useFetch<T>(fetchFn: () => Promise<T>, immediate = true) {
         }
     }, [execute, immediate]);
 
-    const setData = useCallback((newData: T) => {
-        setState(prev => ({ ...prev, data: newData }));
+    const setData = useCallback((update: T | ((prev: T | null) => T)) => {
+        setState(prev => ({
+            ...prev,
+            data: typeof update === 'function' ? (update as any)(prev.data) : update
+        }));
     }, []);
 
     return { ...state, execute, setData };
